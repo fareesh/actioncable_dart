@@ -116,7 +116,7 @@ class ActionCable {
       case 'ping':
         // rails sends epoch as seconds not miliseconds
         _lastPing =
-            DateTime.fromMillisecondsSinceEpoch(payload['message'] * 1000);
+            DateTime.now();
         break;
       case 'welcome':
         if (onConnected != null) {
